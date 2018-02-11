@@ -23,10 +23,10 @@
  //.koding simpan
 if (isset($_POST['add'])) {
 	$nama = $_POST['nama'];
-	$hasil_ki = $_POST['hasil_ki'];
-	$hasil_kk = $_POST['hasil_kk'];
-	$hasil_pk = $_POST['hasil_pk'];
-	$hasil_kp = $_POST['hasil_kp'];
+	$hasil_ki = $_POST['ki'];
+	$hasil_kk = $_POST['kk'];
+	$hasil_pk = $_POST['pk'];
+	$hasil_kp = $_POST['kp'];
 	$total = $_POST['total'];
   if ($nama != '') {
 		$insert = mysqli_query($koneksi, "INSERT INTO sub_kriteria (`nip`, `hasil_ki`,`hasil_kk`,`hasil_pk`,`hasil_kp`,`total`) 
@@ -69,13 +69,14 @@ if (isset($_POST['add'])) {
 				Penilaian Kapasitas Intelektual</li>
                 </ol>
        <div class="col-md-4"><label>Pekerjaan Formal</label> 
-        <input  class="form-control form-white" name="nip" pattern="[0-9]*" value="" required></div>
+        <input  class="form-control form-white" id="pf" pattern="[0-9]*" value="" required></div>
 		
 		<div class="col-md-4"><label>Pendidikan Teknis</label> 
-        <input  class="form-control form-white" name="nip" pattern="[0-9]*" value="" required></div>
+        <input  class="form-control form-white" id="pt" pattern="[0-9]*" value="" required></div>
 		
 		<div class="col-md-4"><label>Pengalaman Kerja</label> 
-        <input  class="form-control form-white" name="nip" pattern="[0-9]*" value="" required></div></div>
+        <input  class="form-control form-white" id="pk" pattern="[0-9]*" value="" required></div>
+    	</div>
 		
 		<br></br><br></br>
 		<div><ol class="breadcrumb">
@@ -83,16 +84,16 @@ if (isset($_POST['add'])) {
 				Penilaian Kapasitas Kepribadian</li>
                 </ol>
 		<div class="col-md-3"><label>Disiplin</label> 
-        <input  class="form-control form-white" name="nip" pattern="[0-9]*" value="" required></div>
+        <input  class="form-control form-white" id="di" pattern="[0-9]*" value="" required></div>
 		
 		<div class="col-md-3"><label>Motivasi</label> 
-        <input  class="form-control form-white" name="nip" pattern="[0-9]*" value="" required></div>
+        <input  class="form-control form-white" id="mo" pattern="[0-9]*" value="" required></div>
 		
 		<div class="col-md-3"><label>Etika</label> 
-        <input  class="form-control form-white" name="nip" pattern="[0-9]*" value="" required></div>
+        <input  class="form-control form-white" id="et" pattern="[0-9]*" value="" required></div>
 		
 		<div class="col-md-3"><label>Kejujuran</label> 
-        <input  class="form-control form-white" name="nip" pattern="[0-9]*" value="" required></div>
+        <input  class="form-control form-white" id="ke" pattern="[0-9]*" value="" required></div>
 		</div>
 		
 		<br></br><br></br>
@@ -102,22 +103,22 @@ if (isset($_POST['add'])) {
                 </ol>
 		
 		<div class="col-md-2"><label>Sistematis</label> 
-        <input  class="form-control form-white" name="nip" pattern="[0-9]*" value="" required></div>
+        <input  class="form-control form-white" id="si" pattern="[0-9]*" value="" required></div>
 		
 		<div class="col-md-2"><label>Analisis</label> 
-        <input  class="form-control form-white" name="nip" pattern="[0-9]*" value="" required></div>
+        <input  class="form-control form-white" id="an" pattern="[0-9]*" value="" required></div>
 		
 		<div class="col-md-2"><label>Kecermatan</label> 
-        <input  class="form-control form-white" name="nip" pattern="[0-9]*" value="" required></div></div>
+        <input  class="form-control form-white" id="kec" pattern="[0-9]*" value="" required></div></div>
 		
 		<div class="col-md-2"><label>Tanggap</label> 
-        <input  class="form-control form-white" name="nip" pattern="[0-9]*" value="" required></div>
+        <input  class="form-control form-white" id="ta" pattern="[0-9]*" value="" required></div>
 		
 		<div class="col-md-2"><label>Kerjasama</label> 
-        <input  class="form-control form-white" name="nip" pattern="[0-9]*" value="" required></div>
+        <input  class="form-control form-white" id="ker" pattern="[0-9]*" value="" required></div>
 		
 		<div class="col-md-2"><label>Tanggung Jawab</label> 
-        <input  class="form-control form-white" name="nip" pattern="[0-9]*" value="" required></div>
+        <input  class="form-control form-white" id="tj" pattern="[0-9]*" value="" required></div>
 		</div>
 		<br></br><br></br>
 		<div><ol class="breadcrumb">
@@ -126,16 +127,16 @@ if (isset($_POST['add'])) {
                 </ol>
 		
 		<div class="col-md-3"><label>Kerja Sama</label> 
-        <input  class="form-control form-white" name="nip" pattern="[0-9]*" value="" required></div>
+        <input  class="form-control form-white" id="ks" pattern="[0-9]*" value="" required></div>
 		
 		<div class="col-md-3"><label>Manajerial</label> 
-        <input  class="form-control form-white" name="nip" pattern="[0-9]*" value="" required></div>
+        <input  class="form-control form-white" id="ma" pattern="[0-9]*" value="" required></div>
 		
 		<div class="col-md-3"><label>Pikiran</label> 
-        <input  class="form-control form-white" name="nip" pattern="[0-9]*" value="" required></div>
+        <input  class="form-control form-white" id="pi" pattern="[0-9]*" value="" required></div>
 		
 		<div class="col-md-3"><label>Keteladanan</label> 
-        <input  class="form-control form-white" name="nip" pattern="[0-9]*" value="" required></div></div>
+        <input  class="form-control form-white" id="ket" pattern="[0-9]*" value="" required></div></div>
 		
 		<br></br><br></br>
 		<div><ol class="breadcrumb">
@@ -143,16 +144,16 @@ if (isset($_POST['add'])) {
 				Hasil Nilai</li>
                 </ol>
 		<div class="col-md-3"><label>Nilai Kapasitas Intelektual</label> 
-        <input  class="form-control form-white" name="ki" pattern="[0-9]*" value="" readonly></div>
+        <input  class="form-control form-white" name="ki" id="ki" pattern="[0-9]*" value="" readonly></div>
 		
 		<div class="col-md-3"><label>Nilai Kapasitas Kepribadian</label> 
-        <input  class="form-control form-white" name="kk" pattern="[0-9]*" value="" readonly></div>
+        <input  class="form-control form-white" name="kk" id="kk" pattern="[0-9]*" value="" readonly></div>
 		
 		<div class="col-md-3"><label>Nilai Pola Kerja</label> 
-        <input  class="form-control form-white" name="pk" pattern="[0-9]*" value="" readonly></div>
+        <input  class="form-control form-white" name="pk" id="npk" pattern="[0-9]*" value="" readonly></div>
 		
 		<div class="col-md-3"><label>Nilai Kepemimpinan</label> 
-        <input  class="form-control form-white" name="kp" pattern="[0-9]*" value="" readonly ></div>
+        <input  class="form-control form-white" name="kp" id="nkp" pattern="[0-9]*" value="" readonly ></div>
 		
                         
         
@@ -167,4 +168,3 @@ if (isset($_POST['add'])) {
 
     </div>
   <?php include "footer.php";?>
-
